@@ -8,16 +8,16 @@
     border-radius: 1.5em;
 }
 
-p {
+#mainE p {
     text-align: left;
     font-family: 'Indie Flower', cursive;
 }
 
-h2 {
+#mainE h2 {
   font-family:Arial, Helvetica, sans-serif;
 }
 
-a {
+#mainE a {
   color:  blue;
   text-decoration: none;
 }
