@@ -1,0 +1,29 @@
+#aMain {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+    z-index: 1;
+    width: 90%;
+    margin-bottom: 4em;
+}
+
+#aMain .container {
+    position: relative;
+    text-align: center;
+    height: 300px;
+    width: 500px;
+    margin-bottom: 2em;
+}
+
+#aMain .container a {
+    width: 30rem;
+    text-decoration: none;
+    height: 100%;
+}
+
+#aMain .container a img {
+    height: 300px;
+    width: 500px;
+}
