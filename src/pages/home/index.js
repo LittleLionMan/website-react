@@ -38,8 +38,7 @@ export default function Home() {
                     <div id="intro" style={{display: 'none'}}>
                         <p>Update 1: Die Homepage läuft nun endlich mit React. Falls irgendetwas nicht mehr funktioniert,
                             freue ich mich über Feedback! <a href='https://github.com/LittleLionMan/website-react'>GitHub für Interessierte</a><br />
-                            Das nervige doppelte Refreshen beim Navigieren durch die Artikel ist Folge eines workarounds für einen Bug für
-                            den ich leider noch keine Lösung gefunden habe.
+                            Neu ist vorerst die Navigation für die einzelnen Artikel.
                         </p><br />
                     <p>Am 2.6. starte ich mit Jonny nach Bangkok. Damit geht eine formidable Zeit vorbei, 
                         in der ich es geschafft habe, Europa nie zu verlassen. Nichtsdestotrotz werden wir versuchen
