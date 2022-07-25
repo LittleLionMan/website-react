@@ -6,11 +6,4 @@ export const Info = [
         sourceT: "Geklaut aus diesem wundervollen Tutorial",
         pic: 'fighting.png'
     },
-    {
-        name: "Film Finder",
-        link: "",
-        source: "https://www.codecademy.com/",
-        sourceT: "Codecademy Tutorial",
-        pic: 'ffinder.png'
-    }
 ];
