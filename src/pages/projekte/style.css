@@ -12,6 +12,11 @@
     margin-bottom: 4em;
 }
 
+#Smain a {
+    color:  blue;
+    text-decoration: none;
+  }
+
 #apps {
     display: flex;
     flex-wrap: wrap;

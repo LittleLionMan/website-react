@@ -14,7 +14,7 @@ export const Info = [
         name: "Buddha bei die Fische",
         date: '17.7.2022',
         location: "Kuala Lumpur",
-        images: 6,
+        images: [1, 2, 3, 4, 5, 6],
         data: neun
     },
     {
@@ -22,7 +22,7 @@ export const Info = [
         name: "Im Schatten des Marina Bay",
         date: '6.7.2022',
         location: "Singapur",
-        images: 6,
+        images: [1, 2, 3, 4, 5, 6],
         data: acht
     },
     {
@@ -30,7 +30,7 @@ export const Info = [
         name: "Irgendwelche Inseln deren Namen ich längst vergessen habe",
         date: '30.6.2022',
         location: "Ko Phi Phi",
-        images: 4,
+        images: [1, 2, 3, 4],
         data: sieben
     },
     {
@@ -38,7 +38,7 @@ export const Info = [
         name: "Kunst kann manchmal auch die Natur, der See aber definitiv",
         date: '25.6.2022',
         location: "Khao Sok",
-        images: 4,
+        images: [1, 2, 3, 4],
         data: sechs
     },
     {
@@ -46,7 +46,7 @@ export const Info = [
         name: "Was wird hier wohl von Einheimischen und was von Touristen bewohnt?",
         date: '23.6.2022',
         location: null,
-        images: 1,
+        images: [1],
         data: fuenf
     },
     {
@@ -54,7 +54,7 @@ export const Info = [
         name: "Abgesang auf's Inselleben",
         date: '18.6.2022',
         location: "Koh Phangan",
-        images: 3,
+        images: [1, 2, 3],
         data: vier
     },
     {
@@ -62,7 +62,7 @@ export const Info = [
         name: "Endlich ein Foto mit Jonny",
         date: '14.6.2022',
         location: null,
-        images: 2,
+        images: [1, 2],
         data: drei
     },
     {
@@ -70,7 +70,7 @@ export const Info = [
         name: "Bangkok bei Nacht von oben",
         date: '11.6.2022',
         location: "Bangkok",
-        images: 3,
+        images: [1, 2, 3],
         data: zwei
     },
     {
@@ -78,7 +78,7 @@ export const Info = [
         name: "Bangkok bei Nacht",
         date: '5.6.2022',
         location: "Bangkok",
-        images: 2,
+        images: [1, 2],
         data: eins
     }
 ];

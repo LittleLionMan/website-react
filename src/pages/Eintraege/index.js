@@ -1,39 +1,38 @@
-import { useParams, useNavigate, } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { useState, useEffect, } from 'react';
 import './style.css';
 import { Info } from './info';
 
 export default function Eintraege() {
-    const [data, setData] = useState(null);
     const { id } = useParams();
     let idN = parseInt(id);
+    const [data, setData] = useState(null);
     let counter = 1;
     let keyC = 0;
     const navigate = useNavigate();
 
+
     const back = () => {
-        navigate(`/archiv/eintrag${idN - 1}`)
-        navigate(0)
+        setData(null);
+        navigate(`/archiv/eintrag${idN - 1}`);
     }
 
     const forward = () => {
-        navigate(`/archiv/eintrag${idN + 1}`)
-        navigate(0) //Unbedingt überarbeiten. Sehr unschön!
+        setData(null);
+        navigate(`/archiv/eintrag${idN + 1}`);
     }
-
-    function selection(item) {
-            
-        if (item.number === idN) {
-            const packet = item.data;
-            setData(packet);
-        }
-    }
-   
 
     useEffect(()=> {
+        function selection(item) {
+            
+            if (item.number === idN) {
+                const packet = item.data;
+                setData(packet);
+            }
+        }
         Info.forEach(selection); 
-    });
-    
+    }, [idN]);
+
     if (data === null) {
         return 'Loading...'
     }
@@ -70,7 +69,7 @@ export default function Eintraege() {
                                 );
                                 case 'Zitat':
                                     return (
-                                        <p className='zitat'>{div.Zitat}</p>
+                                        <p key={keyC} className='zitat'>{div.Zitat}</p>
                                     );
                             case 'ImageH':
                                 counter++;
@@ -94,9 +93,10 @@ export default function Eintraege() {
                                 );
                             case 'Liste':
                                 return (
-                                    <ol>{div.Liste.map((li) => {
+                                    <ol key={keyC}>{div.Liste.map((li) => {
+                                        keyC++
                                        return (
-                                        <li>{li}</li>
+                                        <li key={keyC}>{li}</li>
                                        ) 
                                     })}</ol>
                                 )
