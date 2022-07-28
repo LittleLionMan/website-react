@@ -1,18 +1,22 @@
 import { useState, useEffect } from "react";
 import './style.css';
+import { api } from '../../ressources/api';
 
 export default function GetCityInfo(id) {
     const [cityInfo, setCityInfo] = useState([]);
     const [weather, setWeather] = useState(null);
     const [time, setTime] = useState(null);
     const wikiId = id.id;
+    const citiesKey = api.cities;
+    const weatherKey = api.weather;
+    const timezoneKey = api.timezone;
    /* useEffect(() => {
         // GET request using fetch inside useEffect React hook
         const endpoint = 'https://api.api-ninjas.com/v1/city?name='
         const request = {
             method: 'Get',
             headers: {
-                'X-Api-Key': 'qRR7veQG0o8ayqmi5hniTw==0q9aiPVHqguKPipd'
+                'X-Api-Key': ''
             }
         }
          fetch(endpoint + loc, request)
@@ -40,7 +44,7 @@ export default function GetCityInfo(id) {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "wft-geo-db.p.rapidapi.com",
-                "x-rapidapi-key": "9bdb139e84mshb898206982ee48bp1fa6eejsn20961e39fff0"
+                "x-rapidapi-key": citiesKey
             }
         };
         const endpoint = `https://wft-geo-db.p.rapidapi.com/v1/geo/cities/${wikiId}`;
@@ -68,7 +72,7 @@ export default function GetCityInfo(id) {
                 })
             }
             });
-    }, [wikiId]);
+    }, [citiesKey, wikiId]);
 
 
      useEffect(() => {
@@ -77,7 +81,7 @@ export default function GetCityInfo(id) {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "world-time2.p.rapidapi.com",
-                "x-rapidapi-key": "9bdb139e84mshb898206982ee48bp1fa6eejsn20961e39fff0"
+                "x-rapidapi-key": timezoneKey
             }
         };
         const endpoint = `https://world-time2.p.rapidapi.com/timezone/${cityInfo.continent}/${cityInfo.timezone}`;
@@ -89,20 +93,17 @@ export default function GetCityInfo(id) {
                     setTime(data.datetime.slice(11, 16));
                 }
             });
-    }, [cityInfo.continent, cityInfo.timezone]);
+    }, [cityInfo.continent, cityInfo.timezone, timezoneKey]);
 
     useEffect(() => {
         // GET request using fetch inside useEffect React hook
         const lat = (Math.round(cityInfo.lat * 100) / 100).toFixed(2);
         const lon = (Math.round(cityInfo.long * 100) / 100).toFixed(2);
-        const key = '013e49d9f84487d396daebe092b7aa53';
-        const endpoint = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`;
+        const endpoint = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weatherKey}`;
         if (!isNaN(lat)) {
         fetch(endpoint)
             .then(response => response.json())
             .then(data => {
-                console.log(data);
-                console.log(data.weather[0].icon);
                 setWeather({
                     temp: data.main.temp,
                     icon: data.weather[0].icon
@@ -111,7 +112,7 @@ export default function GetCityInfo(id) {
             });
         }
     // empty dependency array means this effect will only run once (like componentDidMount in classes)
-    }, [cityInfo.lat, cityInfo.long]);
+    }, [cityInfo.lat, cityInfo.long, weatherKey]);
 
     return (
         <div className='infoContainer'>
