@@ -22,6 +22,7 @@ function text () {
     };
 }
 
+
 export default function Home() {
     return (
         <div>

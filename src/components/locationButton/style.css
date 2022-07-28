@@ -1,0 +1,24 @@
+
+  .ort {
+    display: flex;
+  }
+
+  .ort button {
+    height: 2em;
+    
+  }
+
+  .ort p {
+    margin-right: 1em;
+    height: 2em;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 3px;
+  }
+
+  @media only screen and (max-width: 650px) {
+    .containerL {
+      display: none
+    }
+
+  }

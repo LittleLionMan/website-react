@@ -13,7 +13,10 @@ export const Info = [
         number: 9,
         name: "Buddha bei die Fische",
         date: '17.7.2022',
-        location: "Kuala Lumpur",
+        location: [{name: "Melaka",
+                    wikiId: 'Q61089'}, 
+                    {name: "Kuala Lumpur",
+                    wikiId: 'Q1865'}],
         images: [1, 2, 3, 4, 5, 6],
         data: neun
     },
@@ -21,7 +24,8 @@ export const Info = [
         number: 8,
         name: "Im Schatten des Marina Bay",
         date: '6.7.2022',
-        location: "Singapur",
+        location: [{name: "Singapur",
+                    wikiId: 'Q13882341'}],
         images: [1, 2, 3, 4, 5, 6],
         data: acht
     },
@@ -29,7 +33,8 @@ export const Info = [
         number: 7,
         name: "Irgendwelche Inseln deren Namen ich längst vergessen habe",
         date: '30.6.2022',
-        location: "Ko Phi Phi",
+        location: [{name: "Ko Phi Phi",
+                    wikiId: 'Q511957'}],
         images: [1, 2, 3, 4],
         data: sieben
     },
@@ -37,7 +42,8 @@ export const Info = [
         number: 6,
         name: "Kunst kann manchmal auch die Natur, der See aber definitiv",
         date: '25.6.2022',
-        location: "Khao Sok",
+        location: [{name: "Khao Sok",
+                    wikiId: 'Q1760520'}],
         images: [1, 2, 3, 4],
         data: sechs
     },
@@ -45,7 +51,7 @@ export const Info = [
         number: 5,
         name: "Was wird hier wohl von Einheimischen und was von Touristen bewohnt?",
         date: '23.6.2022',
-        location: null,
+        location: [],
         images: [1],
         data: fuenf
     },
@@ -53,7 +59,10 @@ export const Info = [
         number: 4,
         name: "Abgesang auf's Inselleben",
         date: '18.6.2022',
-        location: "Koh Phangan",
+        location: [{name: "Koh Tao",
+                    wikiId: 'Q525940'}, 
+                    {name: "Koh Phangan",
+                    wikiId: 'Q1725550'}],
         images: [1, 2, 3],
         data: vier
     },
@@ -61,7 +70,7 @@ export const Info = [
         number: 3,
         name: "Endlich ein Foto mit Jonny",
         date: '14.6.2022',
-        location: null,
+        location: [],
         images: [1, 2],
         data: drei
     },
@@ -69,7 +78,10 @@ export const Info = [
         number: 2,
         name: "Bangkok bei Nacht von oben",
         date: '11.6.2022',
-        location: "Bangkok",
+        location: [{name: "Bangkok",
+                    wikiId: 'Q1861'}, 
+                    {name: "Koh Tao",
+                    wikiId: 'Q525940'}],
         images: [1, 2, 3],
         data: zwei
     },
@@ -77,8 +89,11 @@ export const Info = [
         number: 1,
         name: "Bangkok bei Nacht",
         date: '5.6.2022',
-        location: "Bangkok",
+        location: [{name: "Köln",
+                    wikiId: 'Q365'}, 
+                    {name: "Bangkok",
+                    wikiId: 'Q1861'}],
         images: [1, 2],
-        data: eins
+        data: eins,
     }
 ];

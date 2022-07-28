@@ -2,24 +2,29 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect, } from 'react';
 import './style.css';
 import { Info } from './info';
+import GetCityButton from '../../components/locationButton';
 
 export default function Eintraege() {
     const { id } = useParams();
     let idN = parseInt(id);
     const [data, setData] = useState(null);
+    const [location, setLocation] = useState(null);
     let counter = 1;
     let keyC = 0;
     const navigate = useNavigate();
 
-
     const back = () => {
-        setData(null);
-        navigate(`/archiv/eintrag${idN - 1}`);
+        if (idN > 1) {
+            setData(null);
+            navigate(`/archiv/eintrag${idN - 1}`);
+        }
     }
 
     const forward = () => {
-        setData(null);
-        navigate(`/archiv/eintrag${idN + 1}`);
+        if (idN !== Info.length) {
+            setData(null);
+            navigate(`/archiv/eintrag${idN + 1}`);
+        } 
     }
 
     useEffect(()=> {
@@ -33,17 +38,24 @@ export default function Eintraege() {
         Info.forEach(selection); 
     }, [idN]);
 
+    useEffect(() => {
+        const loc = Info[idN - 1].location;
+        setLocation(loc);
+    }, [idN])
+
+
     if (data === null) {
         return 'Loading...'
     }
 
     return(
         <div>
-            <div style={idN === 1 ? {justifyContent:'flex-end'} : {}} className="actions-container-up">
-                <button style={idN === 1 ? {display:'none'} : {}} className="button" onClick={back}>
-                    Voheriger Artikel
+            <div className="actions-container-up">
+                <button className={idN === 1? "hidden" : "button"} onClick={back}>
+                    Vorheriger Artikel
                 </button>
-                <button style={idN === Info.length ? {display:'none'} : {}} className="button" onClick={forward}>
+                <GetCityButton location={location}/>
+                <button className={idN === Info.length ? "hidden" : "button"} onClick={forward}>
                     Nächster Artikel
                 </button>
             </div>
@@ -110,11 +122,11 @@ export default function Eintraege() {
                     )
                 }    
             </div>
-            <div style={idN === 1 ? {justifyContent:'flex-end'} : {}} className="actions-container-down">
-                <button style={idN === 1 ? {display:'none'} : {}} className="button" onClick={back}>
-                    Voheriger Artikel
+            <div className="actions-container-down">
+                <button className={idN === 1? "hidden" : "button"} onClick={back}>
+                    Vorheriger Artikel
                 </button>
-                <button style={idN === Info.length ? {display:'none'} : {}} className="button" onClick={forward}>
+                <button className={idN === Info.length ? "hidden" : "button"} onClick={forward}>
                     Nächster Artikel
                 </button>
             </div>

@@ -18,7 +18,7 @@ footer {
 }
 
 @keyframes rightThenLeft {
-    0%   {margin-right: 90%;}
+    0%   {margin-right: 80%;} /* Bei neuuer Textlänge ändern */
     50%  {margin-right: 0%;}
-    100% {margin-right: 90%;}
+    100% {margin-right: 80%;}
 }
