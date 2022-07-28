@@ -1,5 +1,5 @@
 .infoContainer {
-    display: box;
+    display: flex;
     position: fixed;
     overflow: hidden;
     width: 300px;
