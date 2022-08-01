@@ -7,8 +7,22 @@ import { sechs } from './Eintrag 6/eintrag6';
 import { sieben } from './Eintrag 7/eintrag7';
 import { acht } from './Eintrag 8/eintrag8';
 import { neun } from './Eintrag 9/eintrag9';
+import { zehn } from './Eintrag 10/eintrag10';
 
 export const Info = [
+    {
+        number: 10,
+        name: "Sonneuntergang für zwei hervorragende Monate",
+        date: '1.8.2022',
+        location: [{name: "Kota Kinabalu",
+                    wikiId: 'Q137271'},
+                    {name: "Ranau",
+                    wikiId: 'Q1185989'},
+                    {name: 'Bangkok',
+                    wikiId: 'Q1861'}],
+        images: [1, 2, 3, 4, 5],
+        data: zehn 
+    },
     {
         number: 9,
         name: "Buddha bei die Fische",
@@ -31,7 +45,7 @@ export const Info = [
     },
     {
         number: 7,
-        name: "Irgendwelche Inseln deren Namen ich längst vergessen habe",
+        name: "Irgendwelche Inseln, deren Namen ich längst vergessen habe",
         date: '30.6.2022',
         location: [{name: "Ko Phi Phi",
                     wikiId: 'Q511957'}],
