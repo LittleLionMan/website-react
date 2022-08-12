@@ -65,7 +65,7 @@ export default function Home() {
                     <Link to={`/archiv/eintrag${aktuell}`}>
                     <figure>
                         <img src={require(`../Eintraege/Eintrag ${aktuell}/pics/1.jpg`)} alt='Hier fehlt ein Bild'/>
-                        <figcaption>17.07.</figcaption>
+                        <figcaption>{Info[aktuell - 1].date}</figcaption>
                     </figure>
                     </Link>
                 </div>

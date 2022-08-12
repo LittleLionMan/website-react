@@ -8,8 +8,19 @@ import { sieben } from './Eintrag 7/eintrag7';
 import { acht } from './Eintrag 8/eintrag8';
 import { neun } from './Eintrag 9/eintrag9';
 import { zehn } from './Eintrag 10/eintrag10';
+import { elf } from './Eintrag 11/eintrag11';
 
 export const Info = [
+    {
+        number: 11,
+        name: "Graue Wolken über Seoul",
+        date: '12.8.2022',
+        location: [{name: "Seoul",
+                    wikiId: 'Q8684'},
+                    ],
+        images: [1, 2, 3, 4],
+        data: elf 
+    },
     {
         number: 10,
         name: "Sonneuntergang für zwei hervorragende Monate",
