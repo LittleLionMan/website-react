@@ -10,7 +10,6 @@ import Footer from '../components/footer/footer';
 
 
 function App() {
-
   return (
     <Router>
       <Header />

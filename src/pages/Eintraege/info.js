@@ -9,8 +9,19 @@ import { acht } from './Eintrag 8/eintrag8';
 import { neun } from './Eintrag 9/eintrag9';
 import { zehn } from './Eintrag 10/eintrag10';
 import { elf } from './Eintrag 11/eintrag11';
+import { zwoelf } from './Eintrag 12/eintrag12';
 
 export const Info = [
+    {
+       number: 12,
+       name: "Sonntage sind keine Strandtage",
+       date: '12.9.2022',
+       location: [{name: "Busan",
+                wikiId: "Q16520"}
+                ],
+        images: [1, 2, 3, 4, 5, 6],
+        data: zwoelf
+    },
     {
         number: 11,
         name: "Graue Wolken über Seoul",
