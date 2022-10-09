@@ -10,8 +10,24 @@ import { neun } from './Eintrag 9/eintrag9';
 import { zehn } from './Eintrag 10/eintrag10';
 import { elf } from './Eintrag 11/eintrag11';
 import { zwoelf } from './Eintrag 12/eintrag12';
+import { dreizehn } from './Eintrag 13/eintrag13';
 
 export const Info = [
+    {
+        number: 13,
+        name: "Regenzeit kann schön sein",
+        date: '09.10.2022',
+        location: [{name: "Hanoi",
+                 wikiId: "Q1858"},
+                 {name: "Ninh Binh",
+                 wikiId: "Q33929"},
+                 {name: "Vinh",
+                 wikiId: "Q33428"}
+                 ],
+
+         images: [1, 2, 3, 4, 5, 6, 7],
+         data: dreizehn
+     },
     {
        number: 12,
        name: "Sonntage sind keine Strandtage",
