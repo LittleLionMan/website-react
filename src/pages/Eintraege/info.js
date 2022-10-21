@@ -11,8 +11,24 @@ import { zehn } from './Eintrag 10/eintrag10';
 import { elf } from './Eintrag 11/eintrag11';
 import { zwoelf } from './Eintrag 12/eintrag12';
 import { dreizehn } from './Eintrag 13/eintrag13';
+import { vierzehn } from './Eintrag 14/eintrag14';
 
 export const Info = [
+    {
+        number: 14,
+        name: "Sonniges Gemüt und nasse Füße",
+        date: '21.10.2022',
+        location: [{name: "Phnom Penh",
+                 wikiId: "Q1850"},
+                 {name: "Siem Reap",
+                 wikiId: "Q11711"},
+                 {name: "Kampot",
+                 wikiId: "Q876549"}
+                 ],
+
+         images: [1, 2, 3, 4, 5, 6, 7, 8],
+         data: vierzehn
+    },
     {
         number: 13,
         name: "Regenzeit kann schön sein",
