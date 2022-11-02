@@ -12,8 +12,24 @@ import { elf } from './Eintrag 11/eintrag11';
 import { zwoelf } from './Eintrag 12/eintrag12';
 import { dreizehn } from './Eintrag 13/eintrag13';
 import { vierzehn } from './Eintrag 14/eintrag14';
+import { fuenfzehn } from './Eintrag 15/eintrag15';
 
 export const Info = [
+    {
+        number: 15,
+        name: "Warum zur Abwechslung nicht mal Griechenland?",
+        date: '03.11.2022',
+        location: [{name: "Athen",
+                 wikiId: "Q1524"},
+                 {name: "Poros",
+                 wikiId: "Q21643708"},
+                 {name: "Kalabaka",
+                 wikiId: "Q940330"}
+                 ],
+
+         images: [1, 2, 3, 4, 5, 6, 7, 8],
+         data: fuenfzehn
+    },
     {
         number: 14,
         name: "Sonniges Gemüt und nasse Füße",
