@@ -13,8 +13,18 @@ import { zwoelf } from './Eintrag 12/eintrag12';
 import { dreizehn } from './Eintrag 13/eintrag13';
 import { vierzehn } from './Eintrag 14/eintrag14';
 import { fuenfzehn } from './Eintrag 15/eintrag15';
+import { sechszehn } from './Eintrag 16/eintrag16';
+
 
 export const Info = [
+    {
+        number: 16,
+        name: "Irgendwas mit Clickbait",
+        date: '18.11.2022',
+        location: [],
+         images: [1, 2],
+         data: sechszehn
+    },
     {
         number: 15,
         name: "Warum zur Abwechslung nicht mal Griechenland?",

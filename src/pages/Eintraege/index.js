@@ -111,6 +111,25 @@ export default function Eintraege() {
                                         <li key={keyC}>{li}</li>
                                        ) 
                                     })}</ol>
+                                );
+                            case 'Video':
+                                return (
+                                    <iframe 
+                                        key={keyC}
+                                        width="560" 
+                                        height="315" 
+                                        src={`https://www.youtube.com/embed/${div.video}`} 
+                                        title="YouTube video player" 
+                                        frameBorder="0" 
+                                        allow="accelerometer; 
+                                        autoplay; 
+                                        clipboard-write; 
+                                        encrypted-media; 
+                                        gyroscope; 
+                                        picture-in-picture" 
+                                        allowFullScreen
+                                        >
+                                    </iframe>
                                 )
                             default:
                                 return (
